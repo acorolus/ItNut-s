@@ -1,0 +1,28 @@
+it_nut_it_nut_homepage:
+    path:     /
+    defaults: { _controller: ItNutItNutBundle:Default:index }
+
+it_nut_it_nut_boutique:
+    path: /boutique
+    defaults: { _controller: ItNutItNutBundle:Boutique:index }
+
+it_nut_it_nut_boutique_show_one:
+    path: /boutique/show/{id}
+    defaults: { _controller: ItNutItNutBundle:Boutique:showOne }
+    
+it_nut_it_nut_boutique_show_add:
+    path: /boutique/add
+    defaults: { _controller: ItNutItNutBundle:Boutique:add }
+    
+it_nut_it_nut_delete:
+    path: /boutique/delete/{id}
+    defaults: { _controller: ItNutItNutBundle:Boutique:delete }
+    
+it_nut_it_nut_modify:
+    path: /boutique/modify/{id}
+    defaults: { _controller: ItNutItNutBundle:Boutique:modify }
+
+
+it_nut_it_nut_challenge:
+    path: /challenge
+    defaults: { _controller: ItNutItNutBundle:Challenge:index }

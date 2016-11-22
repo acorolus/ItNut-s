@@ -1,0 +1,1 @@
+[2016-11-22 04:42:21] assetic.ERROR: The template "SecurityBundle:Collector:security.html.twig" contains an error: Unknown "profiler_dump" function in "SecurityBundle:Collector:security.html.twig" at line 180. [] []

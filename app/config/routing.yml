@@ -1,0 +1,7 @@
+it_nut_it_nut:
+    resource: "@ItNutItNutBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

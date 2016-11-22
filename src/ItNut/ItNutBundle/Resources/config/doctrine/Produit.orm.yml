@@ -1,0 +1,31 @@
+ItNut\ItNutBundle\Entity\Produit:
+    type: entity
+    table: produit
+    repositoryClass: ItNut\ItNutBundle\Repository\ProduitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            unique: true
+        description:
+            type: text
+            unique: false
+        prix:
+            type: float
+            length: 10
+            unique: false
+        shortcode:
+            type: string
+            length: 255
+            unique: true
+        image:
+            type: string
+            length: 255
+            unique: false
+    lifecycleCallbacks: {  }
