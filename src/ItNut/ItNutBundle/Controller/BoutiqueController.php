@@ -53,7 +53,7 @@ class BoutiqueController extends Controller
         $finder = new Finder();
         $finder->files()->in("images");
         $files = $finder->files()->name('*'.$id.'*jpg');
-        return $this->render('ItNutItNutBundle:Boutique:one.html.twig', array( 'id' => $files, 'prix' => $produit->getPrix(), 'nom' => $produit->getNom(), 'description' => $produit->getDescription()));
+        return $this->render('ItNutItNutBundle:Boutique:one.html.twig', array( 'id' => $files, 'prix' => $produit->getPrix(), 'nom' => $produit->getNom(), 'description' => $produit->getDescription(),'shortcode' => str_replace(' ', '-', $produit->getNom())));
     }
     
     public function addAction(Request $request)
@@ -102,7 +102,7 @@ class BoutiqueController extends Controller
             ->add('nom', TextType::class,array('data' => $produit->getNom(),'attr' => array('style' => 'width: 80%')))
             ->add('prix', NumberType::class,array('data' => $produit->getPrix(),'attr' => array('style' => 'width: 20%')))
             ->add('description', TextareaType::class,array('data' => $produit->getDescription(),'attr' => array('style' => 'width: 100%;height: 200px;')))
-            ->add('image', FileType::class)
+            ->add('image', FileType::class,array('data_class' => null))
             ->add('save', SubmitType::class, array('label' => 'Modifier ce produit'))
             ->getForm();
         

@@ -15,8 +15,8 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7968019e4f99aaa797ffcaee2ebc4c530c196f389faa3233e80bbbb5485f0227 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7968019e4f99aaa797ffcaee2ebc4c530c196f389faa3233e80bbbb5485f0227->enter($__internal_7968019e4f99aaa797ffcaee2ebc4c530c196f389faa3233e80bbbb5485f0227_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Boutique:add.html.twig"));
+        $__internal_61479d5808e0f22f437b6c1726b001ad9eedd90990b8a3aa7e63a47ef98a8415 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_61479d5808e0f22f437b6c1726b001ad9eedd90990b8a3aa7e63a47ef98a8415->enter($__internal_61479d5808e0f22f437b6c1726b001ad9eedd90990b8a3aa7e63a47ef98a8415_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Boutique:add.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -86,7 +86,7 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
                         <a href=\"";
         // line 39
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">Acceuil</a>
+        echo "\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"";
@@ -95,7 +95,10 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
         echo "\">Boutique</a>
                     </li>
                     <li>
-                        <a href=\"challenge.html\">Challenge</a>
+                        <a href=\"";
+        // line 45
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_challenge");
+        echo "\">Challenge</a>
                     </li>
                     
                 </ul>
@@ -176,15 +179,7 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
-
+        
     </div>
     <!-- /.container -->
 
@@ -198,7 +193,7 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
 
 </html>";
         
-        $__internal_7968019e4f99aaa797ffcaee2ebc4c530c196f389faa3233e80bbbb5485f0227->leave($__internal_7968019e4f99aaa797ffcaee2ebc4c530c196f389faa3233e80bbbb5485f0227_prof);
+        $__internal_61479d5808e0f22f437b6c1726b001ad9eedd90990b8a3aa7e63a47ef98a8415->leave($__internal_61479d5808e0f22f437b6c1726b001ad9eedd90990b8a3aa7e63a47ef98a8415_prof);
 
     }
 
@@ -214,7 +209,7 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
 
     public function getDebugInfo()
     {
-        return array (  159 => 92,  155 => 91,  151 => 90,  147 => 89,  133 => 78,  94 => 42,  88 => 39,  79 => 33,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
+        return array (  162 => 92,  158 => 91,  154 => 90,  150 => 89,  136 => 78,  100 => 45,  94 => 42,  88 => 39,  79 => 33,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -265,13 +260,13 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
                     <li>
-                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Acceuil</a>
+                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"{{ path('it_nut_it_nut_boutique') }}\">Boutique</a>
                     </li>
                     <li>
-                        <a href=\"challenge.html\">Challenge</a>
+                        <a href=\"{{ path('it_nut_it_nut_challenge') }}\">Challenge</a>
                     </li>
                     
                 </ul>
@@ -337,15 +332,7 @@ class __TwigTemplate_73f48b6685c119b4b85f19cf0f2c8bec34c5b562493a26ea1e37baf9b0f
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
-
+        
     </div>
     <!-- /.container -->
 

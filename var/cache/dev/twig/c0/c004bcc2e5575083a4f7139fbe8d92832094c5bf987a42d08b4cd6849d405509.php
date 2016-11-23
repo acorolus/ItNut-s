@@ -15,8 +15,8 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9af4928306290a9188c2098f6116a1af5d5a57764247764ab772444fb2baed62 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9af4928306290a9188c2098f6116a1af5d5a57764247764ab772444fb2baed62->enter($__internal_9af4928306290a9188c2098f6116a1af5d5a57764247764ab772444fb2baed62_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Boutique:one.html.twig"));
+        $__internal_65583e81ff4430f8f2210068baaa1e21acb11de83e2ca066ba358f27ea3aec2d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_65583e81ff4430f8f2210068baaa1e21acb11de83e2ca066ba358f27ea3aec2d->enter($__internal_65583e81ff4430f8f2210068baaa1e21acb11de83e2ca066ba358f27ea3aec2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Boutique:one.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -87,7 +87,7 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
                         <a href=\"";
         // line 40
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">Acceuil</a>
+        echo "\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"";
@@ -96,7 +96,10 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
         echo "\">Boutique</a>
                     </li>
                     <li>
-                        <a href=\"challenge.html\">Challenge</a>
+                        <a href=\"";
+        // line 46
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_challenge");
+        echo "\">Challenge</a>
                     </li>
                     
                 </ul>
@@ -131,16 +134,50 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
         $context['_seq'] = twig_ensure_traversable(($context["id"] ?? $this->getContext($context, "id")));
         foreach ($context['_seq'] as $context["_key"] => $context["file"]) {
             // line 76
-            echo "                                <img src=\"";
-            echo twig_escape_filter($this->env, ($this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("") . $context["file"]), "html", null, true);
-            echo "\" />
-                            ";
+            echo "                                ";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["file"], "getRealPath", array(), "method"), "html", null, true);
+            echo "
+                                ";
+            // line 77
+            if (($this->getAttribute($context["file"], "getRealPath", array(), "method") == "")) {
+                echo " 
+                                    ";
+                // line 78
+                if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+                    // asset "148b91a_0"
+                    $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_148b91a_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/images/148b91a_healthy_breakfast_vanilla_1.png");
+                    // line 79
+                    echo "                                        <img src=\"";
+                    echo twig_escape_filter($this->env, ($context["asset_url"] ?? $this->getContext($context, "asset_url")), "html", null, true);
+                    echo "\" alt=\"healthy_breakfast_vanilla\" />
+                                    ";
+                } else {
+                    // asset "148b91a"
+                    $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_148b91a") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/images/148b91a.png");
+                    echo "                                        <img src=\"";
+                    echo twig_escape_filter($this->env, ($context["asset_url"] ?? $this->getContext($context, "asset_url")), "html", null, true);
+                    echo "\" alt=\"healthy_breakfast_vanilla\" />
+                                    ";
+                }
+                unset($context["asset_url"]);
+                // line 81
+                echo "                                ";
+            } else {
+                // line 82
+                echo "                                    <img src=\"";
+                echo twig_escape_filter($this->env, ($this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("") . $context["file"]), "html", null, true);
+                echo "\" />
+                                ";
+            }
+            // line 84
+            echo "                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['file'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 78
-        echo "                        </div>
+        // line 85
+        echo "                        
+                        </div>
                     </div>
 
                     <div class=\"col-sm-7 col-lg-7 col-md-7\">
@@ -149,64 +186,91 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
                                 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                                     <ul class=\"nav navbar-nav\">
                                         <li>
+                                        ";
+        // line 95
+        if ((twig_length_filter($this->env, ($context["id"] ?? $this->getContext($context, "id"))) > 3)) {
+            // line 96
+            echo "                                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["id"] ?? $this->getContext($context, "id")));
+            foreach ($context['_seq'] as $context["_key"] => $context["file"]) {
+                // line 97
+                echo "                                                ";
+                $context["fileIdExt"] = twig_split_filter($this->env, $context["file"], "/");
+                // line 98
+                echo "                                                ";
+                $context["fileId"] = twig_split_filter($this->env, $this->getAttribute(($context["fileIdExt"] ?? $this->getContext($context, "fileIdExt")), 1, array()), ".");
+                // line 99
+                echo "                                                ";
+                $context["fileIdLast"] = twig_split_filter($this->env, $this->getAttribute(($context["fileId"] ?? $this->getContext($context, "fileId")), 0, array()), "_");
+                // line 100
+                echo "                                                <a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_modify", array("id" => $this->getAttribute(($context["fileIdLast"] ?? $this->getContext($context, "fileIdLast")), 1, array()))), "html", null, true);
+                echo "\">Modifier</a>
                                             ";
-        // line 87
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["id"] ?? $this->getContext($context, "id")));
-        foreach ($context['_seq'] as $context["_key"] => $context["file"]) {
-            // line 88
-            echo "                                                ";
-            $context["fileIdExt"] = twig_split_filter($this->env, $context["file"], "/");
-            // line 89
-            echo "                                                ";
-            $context["fileId"] = twig_split_filter($this->env, $this->getAttribute(($context["fileIdExt"] ?? $this->getContext($context, "fileIdExt")), 1, array()), ".");
-            // line 90
-            echo "                                                ";
-            $context["fileIdLast"] = twig_split_filter($this->env, $this->getAttribute(($context["fileId"] ?? $this->getContext($context, "fileId")), 0, array()), "_");
-            // line 91
-            echo "                                                <a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_modify", array("id" => $this->getAttribute(($context["fileIdLast"] ?? $this->getContext($context, "fileIdLast")), 1, array()))), "html", null, true);
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['file'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 102
+            echo "                                        ";
+        } else {
+            // line 103
+            echo "                                            <a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_modify", array("id" => ($context["shortcode"] ?? $this->getContext($context, "shortcode")))), "html", null, true);
             echo "\">Modifier</a>
-                                            ";
+                                        ";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['file'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 93
+        // line 105
         echo "                                        </li>
                                     </ul>
                                     <ul class=\"nav navbar-nav\">
                                         <li>
+                                        ";
+        // line 109
+        if ((twig_length_filter($this->env, ($context["id"] ?? $this->getContext($context, "id"))) > 3)) {
+            // line 110
+            echo "                                           ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["id"] ?? $this->getContext($context, "id")));
+            foreach ($context['_seq'] as $context["_key"] => $context["file"]) {
+                // line 111
+                echo "                                                ";
+                $context["fileIdExt"] = twig_split_filter($this->env, $context["file"], "/");
+                // line 112
+                echo "                                                ";
+                $context["fileId"] = twig_split_filter($this->env, $this->getAttribute(($context["fileIdExt"] ?? $this->getContext($context, "fileIdExt")), 1, array()), ".");
+                // line 113
+                echo "                                                ";
+                $context["fileIdLast"] = twig_split_filter($this->env, $this->getAttribute(($context["fileId"] ?? $this->getContext($context, "fileId")), 0, array()), "_");
+                echo " 
+                                                <a href=\"";
+                // line 114
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_delete", array("id" => $this->getAttribute(($context["fileIdLast"] ?? $this->getContext($context, "fileIdLast")), 1, array()))), "html", null, true);
+                echo "\">Supprimer</a>
                                             ";
-        // line 97
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["id"] ?? $this->getContext($context, "id")));
-        foreach ($context['_seq'] as $context["_key"] => $context["file"]) {
-            // line 98
-            echo "                                                ";
-            $context["fileIdExt"] = twig_split_filter($this->env, $context["file"], "/");
-            // line 99
-            echo "                                                ";
-            $context["fileId"] = twig_split_filter($this->env, $this->getAttribute(($context["fileIdExt"] ?? $this->getContext($context, "fileIdExt")), 1, array()), ".");
-            // line 100
-            echo "                                                ";
-            $context["fileIdLast"] = twig_split_filter($this->env, $this->getAttribute(($context["fileId"] ?? $this->getContext($context, "fileId")), 0, array()), "_");
-            // line 101
-            echo "                                                <a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_delete", array("id" => $this->getAttribute(($context["fileIdLast"] ?? $this->getContext($context, "fileIdLast")), 1, array()))), "html", null, true);
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['file'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 116
+            echo "                                        ";
+        } else {
+            // line 117
+            echo "                                            <a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_delete", array("id" => ($context["shortcode"] ?? $this->getContext($context, "shortcode")))), "html", null, true);
             echo "\">Supprimer</a>
-                                            ";
+                                        ";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['file'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 103
-        echo "                                        </li>
+        // line 119
+        echo "
+                                            
+                                        </li>
                                     </ul>
                                     <ul class=\"nav navbar-nav navbar-nav-right\">
                                         <li>
                                             <a href=\"";
-        // line 107
+        // line 125
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_boutique");
         echo "\">Tous les produits</a>
                                         </li>
@@ -220,15 +284,15 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
                         <div class=\"thumbnail\">
                             <div class=\"caption\">
                                 <h4 class=\"pull-right\">";
-        // line 118
+        // line 136
         echo twig_escape_filter($this->env, ($context["prix"] ?? $this->getContext($context, "prix")), "html", null, true);
         echo "€</h4>
                                 <h4>";
-        // line 119
+        // line 137
         echo twig_escape_filter($this->env, ($context["nom"] ?? $this->getContext($context, "nom")), "html", null, true);
         echo "</h4>
                                 <p>";
-        // line 120
+        // line 138
         echo ($context["description"] ?? $this->getContext($context, "description"));
         echo "</p>
                             </div>
@@ -248,14 +312,7 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
+        
 
     </div>
     <!-- /.container -->
@@ -270,7 +327,7 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
 
 </html>";
         
-        $__internal_9af4928306290a9188c2098f6116a1af5d5a57764247764ab772444fb2baed62->leave($__internal_9af4928306290a9188c2098f6116a1af5d5a57764247764ab772444fb2baed62_prof);
+        $__internal_65583e81ff4430f8f2210068baaa1e21acb11de83e2ca066ba358f27ea3aec2d->leave($__internal_65583e81ff4430f8f2210068baaa1e21acb11de83e2ca066ba358f27ea3aec2d_prof);
 
     }
 
@@ -286,7 +343,7 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
 
     public function getDebugInfo()
     {
-        return array (  232 => 120,  228 => 119,  224 => 118,  210 => 107,  204 => 103,  195 => 101,  192 => 100,  189 => 99,  186 => 98,  182 => 97,  176 => 93,  167 => 91,  164 => 90,  161 => 89,  158 => 88,  154 => 87,  143 => 78,  134 => 76,  130 => 75,  95 => 43,  89 => 40,  80 => 34,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
+        return array (  296 => 138,  292 => 137,  288 => 136,  274 => 125,  266 => 119,  260 => 117,  257 => 116,  249 => 114,  244 => 113,  241 => 112,  238 => 111,  233 => 110,  231 => 109,  225 => 105,  219 => 103,  216 => 102,  207 => 100,  204 => 99,  201 => 98,  198 => 97,  193 => 96,  191 => 95,  179 => 85,  173 => 84,  167 => 82,  164 => 81,  150 => 79,  146 => 78,  142 => 77,  137 => 76,  133 => 75,  101 => 46,  95 => 43,  89 => 40,  80 => 34,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -338,13 +395,13 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
                     <li>
-                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Acceuil</a>
+                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"{{ path('it_nut_it_nut_boutique') }}\">Boutique</a>
                     </li>
                     <li>
-                        <a href=\"challenge.html\">Challenge</a>
+                        <a href=\"{{ path('it_nut_it_nut_challenge') }}\">Challenge</a>
                     </li>
                     
                 </ul>
@@ -374,8 +431,16 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
                     <div class=\"col-sm-5 col-lg-5 col-md-5\">
                         <div class=\"thumbnail\">
                             {% for file in id %}
-                                <img src=\"{{ asset('')  ~ file }}\" />
+                                {{ file.getRealPath() }}
+                                {% if file.getRealPath() == \"\" %} 
+                                    {% image '@ItNutItNutBundle/Resources/public/images/healthy_breakfast_vanilla.png' %}
+                                        <img src=\"{{ asset_url }}\" alt=\"healthy_breakfast_vanilla\" />
+                                    {% endimage %}
+                                {% else %}
+                                    <img src=\"{{ asset('')  ~ file }}\" />
+                                {% endif %}
                             {% endfor %}
+                        
                         </div>
                     </div>
 
@@ -385,22 +450,32 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
                                 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                                     <ul class=\"nav navbar-nav\">
                                         <li>
+                                        {% if id|length > 3 %}
                                             {% for file in id %}
                                                 {% set fileIdExt = file|split('/') %}
                                                 {% set fileId = fileIdExt.1|split('.') %}
                                                 {% set fileIdLast = fileId.0|split('_') %}
                                                 <a href=\"{{ path('it_nut_it_nut_modify', { 'id': fileIdLast.1 }) }}\">Modifier</a>
                                             {% endfor %}
+                                        {% else %}
+                                            <a href=\"{{ path('it_nut_it_nut_modify', { 'id': shortcode }) }}\">Modifier</a>
+                                        {% endif %}
                                         </li>
                                     </ul>
                                     <ul class=\"nav navbar-nav\">
                                         <li>
-                                            {% for file in id %}
+                                        {% if id|length > 3 %}
+                                           {% for file in id %}
                                                 {% set fileIdExt = file|split('/') %}
                                                 {% set fileId = fileIdExt.1|split('.') %}
-                                                {% set fileIdLast = fileId.0|split('_') %}
+                                                {% set fileIdLast = fileId.0|split('_') %} 
                                                 <a href=\"{{ path('it_nut_it_nut_delete', { 'id': fileIdLast.1 }) }}\">Supprimer</a>
                                             {% endfor %}
+                                        {% else %}
+                                            <a href=\"{{ path('it_nut_it_nut_delete', { 'id': shortcode }) }}\">Supprimer</a>
+                                        {% endif %}
+
+                                            
                                         </li>
                                     </ul>
                                     <ul class=\"nav navbar-nav navbar-nav-right\">
@@ -436,14 +511,7 @@ class __TwigTemplate_da745fbf3bda99820475f3d62c33400918846473539a6f85eb6eaa8ddf1
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
+        
 
     </div>
     <!-- /.container -->

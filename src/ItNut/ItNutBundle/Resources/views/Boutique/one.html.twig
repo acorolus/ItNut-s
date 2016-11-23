@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ path('it_nut_it_nut_homepage') }}">Acceuil</a>
+                        <a href="{{ path('it_nut_it_nut_homepage') }}">Accueil</a>
                     </li>
                     <li>
                         <a href="{{ path('it_nut_it_nut_boutique') }}">Boutique</a>
@@ -73,8 +73,16 @@
                     <div class="col-sm-5 col-lg-5 col-md-5">
                         <div class="thumbnail">
                             {% for file in id %}
-                                <img src="{{ asset('')  ~ file }}" />
+                                {{ file.getRealPath() }}
+                                {% if file.getRealPath() == "" %} 
+                                    {% image '@ItNutItNutBundle/Resources/public/images/healthy_breakfast_vanilla.png' %}
+                                        <img src="{{ asset_url }}" alt="healthy_breakfast_vanilla" />
+                                    {% endimage %}
+                                {% else %}
+                                    <img src="{{ asset('')  ~ file }}" />
+                                {% endif %}
                             {% endfor %}
+                        
                         </div>
                     </div>
 
@@ -84,22 +92,32 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
                                         <li>
+                                        {% if id|length > 3 %}
                                             {% for file in id %}
                                                 {% set fileIdExt = file|split('/') %}
                                                 {% set fileId = fileIdExt.1|split('.') %}
                                                 {% set fileIdLast = fileId.0|split('_') %}
                                                 <a href="{{ path('it_nut_it_nut_modify', { 'id': fileIdLast.1 }) }}">Modifier</a>
                                             {% endfor %}
+                                        {% else %}
+                                            <a href="{{ path('it_nut_it_nut_modify', { 'id': shortcode }) }}">Modifier</a>
+                                        {% endif %}
                                         </li>
                                     </ul>
                                     <ul class="nav navbar-nav">
                                         <li>
-                                            {% for file in id %}
+                                        {% if id|length > 3 %}
+                                           {% for file in id %}
                                                 {% set fileIdExt = file|split('/') %}
                                                 {% set fileId = fileIdExt.1|split('.') %}
-                                                {% set fileIdLast = fileId.0|split('_') %}
+                                                {% set fileIdLast = fileId.0|split('_') %} 
                                                 <a href="{{ path('it_nut_it_nut_delete', { 'id': fileIdLast.1 }) }}">Supprimer</a>
                                             {% endfor %}
+                                        {% else %}
+                                            <a href="{{ path('it_nut_it_nut_delete', { 'id': shortcode }) }}">Supprimer</a>
+                                        {% endif %}
+
+                                            
                                         </li>
                                     </ul>
                                     <ul class="nav navbar-nav navbar-nav-right">
@@ -135,14 +153,7 @@
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
+        
 
     </div>
     <!-- /.container -->

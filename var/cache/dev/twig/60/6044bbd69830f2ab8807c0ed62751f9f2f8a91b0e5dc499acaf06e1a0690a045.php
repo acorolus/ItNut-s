@@ -15,8 +15,8 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_86cc7707bf201896a0c61d1ddc4d2c4ecc5d8d5b0f8747fa4aa73a0e5fe0bb2e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_86cc7707bf201896a0c61d1ddc4d2c4ecc5d8d5b0f8747fa4aa73a0e5fe0bb2e->enter($__internal_86cc7707bf201896a0c61d1ddc4d2c4ecc5d8d5b0f8747fa4aa73a0e5fe0bb2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Boutique:index.html.twig"));
+        $__internal_9fe961037443e0b2471e6d700248b822d2aa3e64b39423d0cd4f6388ec5a27e6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9fe961037443e0b2471e6d700248b822d2aa3e64b39423d0cd4f6388ec5a27e6->enter($__internal_9fe961037443e0b2471e6d700248b822d2aa3e64b39423d0cd4f6388ec5a27e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Boutique:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -75,10 +75,7 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"";
-        // line 34
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">ItNut</a>
+                <a class=\"navbar-brand\" \">ItNut</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
@@ -87,7 +84,7 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
                         <a href=\"";
         // line 40
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">Acceuil</a>
+        echo "\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"";
@@ -96,7 +93,10 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
         echo "\">Boutique</a>
                     </li>
                     <li>
-                        <a href=\"challenge.html\">Challenge</a>
+                        <a href=\"";
+        // line 46
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_challenge");
+        echo "\">Challenge</a>
                     </li>
                     
                 </ul>
@@ -136,6 +136,19 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
         // line 79
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["produits"] ?? $this->getContext($context, "produits")));
+        $context['loop'] = array(
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        );
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
             // line 80
             echo "                        <div class=\"col-sm-4 col-lg-4 col-md-4\">
@@ -165,12 +178,29 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
                                 </div>
                             </div>
                         </div>
-                    ";
+                        ";
+            // line 91
+            if (($this->getAttribute($context["loop"], "index", array()) == 3)) {
+                // line 92
+                echo "                            </div>
+                            <div class=\"row\">
+                        ";
+            }
+            // line 95
+            echo "                    ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 92
+        // line 96
         echo "
                 </div>
 
@@ -185,26 +215,18 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </footer>
-
+        
     </div>
     <!-- /.container -->
 
     ";
-        // line 123
+        // line 119
         echo "
 </body>
 
 </html>";
         
-        $__internal_86cc7707bf201896a0c61d1ddc4d2c4ecc5d8d5b0f8747fa4aa73a0e5fe0bb2e->leave($__internal_86cc7707bf201896a0c61d1ddc4d2c4ecc5d8d5b0f8747fa4aa73a0e5fe0bb2e_prof);
+        $__internal_9fe961037443e0b2471e6d700248b822d2aa3e64b39423d0cd4f6388ec5a27e6->leave($__internal_9fe961037443e0b2471e6d700248b822d2aa3e64b39423d0cd4f6388ec5a27e6_prof);
 
     }
 
@@ -220,7 +242,7 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
 
     public function getDebugInfo()
     {
-        return array (  202 => 123,  174 => 92,  163 => 87,  159 => 86,  152 => 84,  145 => 82,  141 => 80,  137 => 79,  127 => 72,  95 => 43,  89 => 40,  80 => 34,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
+        return array (  224 => 119,  204 => 96,  190 => 95,  185 => 92,  183 => 91,  176 => 87,  172 => 86,  165 => 84,  158 => 82,  154 => 80,  137 => 79,  127 => 72,  98 => 46,  92 => 43,  86 => 40,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -266,19 +288,19 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"{{ path('it_nut_it_nut_homepage') }}\">ItNut</a>
+                <a class=\"navbar-brand\" \">ItNut</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
                     <li>
-                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Acceuil</a>
+                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"{{ path('it_nut_it_nut_boutique') }}\">Boutique</a>
                     </li>
                     <li>
-                        <a href=\"challenge.html\">Challenge</a>
+                        <a href=\"{{ path('it_nut_it_nut_challenge') }}\">Challenge</a>
                     </li>
                     
                 </ul>
@@ -323,6 +345,10 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
                                 </div>
                             </div>
                         </div>
+                        {% if loop.index == 3 %}
+                            </div>
+                            <div class=\"row\">
+                        {%  endif %}
                     {% endfor %}
 
                 </div>
@@ -338,15 +364,7 @@ class __TwigTemplate_9ceba6299ddd1dcea784809e7f772fdfe713791c65c9ae9ca9272535dbb
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </footer>
-
+        
     </div>
     <!-- /.container -->
 

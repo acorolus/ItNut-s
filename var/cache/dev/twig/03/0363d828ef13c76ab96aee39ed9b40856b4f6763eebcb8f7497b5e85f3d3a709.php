@@ -15,8 +15,8 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7ae585e2f0767626cb5d1de52a93bb43def9c1a8c872dc7b2a7aed5a901e460a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7ae585e2f0767626cb5d1de52a93bb43def9c1a8c872dc7b2a7aed5a901e460a->enter($__internal_7ae585e2f0767626cb5d1de52a93bb43def9c1a8c872dc7b2a7aed5a901e460a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Default:index.html.twig"));
+        $__internal_82d34a7f2af4e0641933947032672c6690639b0c7ab75b5d8843d037e7b1743e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_82d34a7f2af4e0641933947032672c6690639b0c7ab75b5d8843d037e7b1743e->enter($__internal_82d34a7f2af4e0641933947032672c6690639b0c7ab75b5d8843d037e7b1743e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -81,10 +81,7 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"";
-        // line 40
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">ItNut</a>
+                <a class=\"navbar-brand\" \">ItNut</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
@@ -93,7 +90,7 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
                         <a href=\"";
         // line 46
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">Acceuil</a>
+        echo "\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"";
@@ -201,14 +198,7 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </footer>
+        
 
     </div>
     <!-- /.container -->
@@ -224,7 +214,7 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
 </html>
 ";
         
-        $__internal_7ae585e2f0767626cb5d1de52a93bb43def9c1a8c872dc7b2a7aed5a901e460a->leave($__internal_7ae585e2f0767626cb5d1de52a93bb43def9c1a8c872dc7b2a7aed5a901e460a_prof);
+        $__internal_82d34a7f2af4e0641933947032672c6690639b0c7ab75b5d8843d037e7b1743e->leave($__internal_82d34a7f2af4e0641933947032672c6690639b0c7ab75b5d8843d037e7b1743e_prof);
 
     }
 
@@ -240,7 +230,7 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
 
     public function getDebugInfo()
     {
-        return array (  174 => 101,  160 => 99,  156 => 98,  107 => 52,  101 => 49,  95 => 46,  86 => 40,  61 => 17,  41 => 15,  37 => 14,  22 => 1,);
+        return array (  171 => 101,  157 => 99,  153 => 98,  104 => 52,  98 => 49,  92 => 46,  61 => 17,  41 => 15,  37 => 14,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -292,13 +282,13 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"{{ path('it_nut_it_nut_homepage') }}\">ItNut</a>
+                <a class=\"navbar-brand\" \">ItNut</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
                     <li>
-                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Acceuil</a>
+                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"{{ path('it_nut_it_nut_boutique') }}\">Boutique</a>
@@ -383,14 +373,7 @@ class __TwigTemplate_831c470319ab5496fc97c4305da1bcd6e240175d20a18adfa7bb028c219
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </footer>
+        
 
     </div>
     <!-- /.container -->

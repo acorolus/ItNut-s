@@ -15,8 +15,8 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bc88737d5a5fa2a440237cbecf4e9e617329ad2aa809dfce1a947725fd45bfca = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bc88737d5a5fa2a440237cbecf4e9e617329ad2aa809dfce1a947725fd45bfca->enter($__internal_bc88737d5a5fa2a440237cbecf4e9e617329ad2aa809dfce1a947725fd45bfca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Challenge:index.html.twig"));
+        $__internal_f672e3d0e9e8e5c772ddfe592534f02606ac9493fca9a4151ecec15a80ffc361 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f672e3d0e9e8e5c772ddfe592534f02606ac9493fca9a4151ecec15a80ffc361->enter($__internal_f672e3d0e9e8e5c772ddfe592534f02606ac9493fca9a4151ecec15a80ffc361_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ItNutItNutBundle:Challenge:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -74,10 +74,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"";
-        // line 33
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">ItNut</a>
+                <a class=\"navbar-brand\" \">ItNut</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
@@ -86,7 +83,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
                         <a href=\"";
         // line 39
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("it_nut_it_nut_homepage");
-        echo "\">Acceuil</a>
+        echo "\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"";
@@ -146,7 +143,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
                         <div class=\"thumbnail\">
                             <div class=\"caption\">
                                 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
-                                PAGE CHALLENGE
+                                PAGE CHALLENGE  --  Bientôt disponible!!!
                                 </div>
                             </div>
                         </div>
@@ -165,14 +162,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
+       
 
     </div>
     <!-- /.container -->
@@ -187,7 +177,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
 
 </html>";
         
-        $__internal_bc88737d5a5fa2a440237cbecf4e9e617329ad2aa809dfce1a947725fd45bfca->leave($__internal_bc88737d5a5fa2a440237cbecf4e9e617329ad2aa809dfce1a947725fd45bfca_prof);
+        $__internal_f672e3d0e9e8e5c772ddfe592534f02606ac9493fca9a4151ecec15a80ffc361->leave($__internal_f672e3d0e9e8e5c772ddfe592534f02606ac9493fca9a4151ecec15a80ffc361_prof);
 
     }
 
@@ -203,7 +193,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
 
     public function getDebugInfo()
     {
-        return array (  136 => 78,  100 => 45,  94 => 42,  88 => 39,  79 => 33,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
+        return array (  133 => 78,  97 => 45,  91 => 42,  85 => 39,  62 => 18,  42 => 16,  38 => 15,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -248,13 +238,13 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"{{ path('it_nut_it_nut_homepage') }}\">ItNut</a>
+                <a class=\"navbar-brand\" \">ItNut</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
                     <li>
-                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Acceuil</a>
+                        <a href=\"{{ path('it_nut_it_nut_homepage') }}\">Accueil</a>
                     </li>
                     <li>
                         <a href=\"{{ path('it_nut_it_nut_boutique') }}\">Boutique</a>
@@ -305,7 +295,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
                         <div class=\"thumbnail\">
                             <div class=\"caption\">
                                 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
-                                PAGE CHALLENGE
+                                PAGE CHALLENGE  --  Bientôt disponible!!!
                                 </div>
                             </div>
                         </div>
@@ -324,14 +314,7 @@ class __TwigTemplate_e4c60b054cde329773842665a2f8054dad7a065d7795c058d669e497cda
 
         <hr>
 
-        <!-- Footer -->
-        <prixter>
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <p>Copyright &copy; DevOps Team</p>
-                </div>
-            </div>
-        </prixter>
+       
 
     </div>
     <!-- /.container -->
