@@ -22,8 +22,14 @@ class BoutiqueController extends Controller
         $finder = new Finder();
         $finder->files()->in("images");
         $finder->files()->name('*_*.jpg');
+        $finderDefault = new Finder();
+        $finderDefault->files()->in("images");
+        $finderDefault->files()->name('*healthy_breakfast_vanilla*.png');
         $infosProduits = array();
         $infosTousProduits = array();
+        foreach ($finderDefault as $key => $file){
+            $defaultImage = $file->getRelativePathname();
+        }
         foreach ($produits as $key => $produit){
             foreach ($finder as $key => $file) {
                 if($produit->getShortcode() == array_slice(explode('_',$file->getRelativePathname()), -2, 1)[0]){
@@ -31,7 +37,7 @@ class BoutiqueController extends Controller
                     array_push($infosProduits, $produit);
                     continue 2;
                 } else {
-                    $produit->setImage("herbalife-default.jpg");
+                    $produit->setImage($defaultImage);
                     array_push($infosProduits, $produit);
                 }
             }
@@ -64,7 +70,7 @@ class BoutiqueController extends Controller
             ->add('nom', TextType::class,array('attr' => array('style' => 'width: 80%')))
             ->add('prix', NumberType::class,array('attr' => array('style' => 'width: 20%')))
             ->add('description', TextareaType::class,array('attr' => array('style' => 'width: 100%;height: 200px;')))
-            ->add('image', FileType::class)
+            ->add('image', FileType::class, array('required' => false))
             ->add('save', SubmitType::class, array('label' => 'Creer un produit'))
             ->getForm();
         

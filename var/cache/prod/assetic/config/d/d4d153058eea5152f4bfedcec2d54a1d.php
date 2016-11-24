@@ -42,4 +42,24 @@ return array (
       ),
     ),
   ),
+  '148b91a' => 
+  array (
+    0 => 
+    array (
+      0 => '@ItNutItNutBundle/Resources/public/images/healthy_breakfast_vanilla.png',
+    ),
+    1 => 
+    array (
+    ),
+    2 => 
+    array (
+      'output' => 'images/148b91a.png',
+      'name' => '148b91a',
+      'debug' => NULL,
+      'combine' => NULL,
+      'vars' => 
+      array (
+      ),
+    ),
+  ),
 );

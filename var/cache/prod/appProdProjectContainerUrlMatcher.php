@@ -64,6 +64,11 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
 
         }
 
+        // it_nut_it_nut_challenge
+        if ($pathinfo === '/challenge') {
+            return array (  '_controller' => 'ItNut\\ItNutBundle\\Controller\\ChallengeController::indexAction',  '_route' => 'it_nut_it_nut_challenge',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
