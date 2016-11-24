@@ -22,26 +22,6 @@ return array (
       ),
     ),
   ),
-  '38da727' => 
-  array (
-    0 => 
-    array (
-      0 => '@ItNutItNutBundle/Resources/public/images/herbalife3.jpg',
-    ),
-    1 => 
-    array (
-    ),
-    2 => 
-    array (
-      'output' => '_controller/images/38da727.jpg',
-      'name' => '38da727',
-      'debug' => NULL,
-      'combine' => NULL,
-      'vars' => 
-      array (
-      ),
-    ),
-  ),
   '148b91a' => 
   array (
     0 => 

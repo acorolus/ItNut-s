@@ -49,19 +49,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/images')) {
-            if (0 === strpos($pathinfo, '/images/38da727')) {
-                // _assetic_38da727
-                if ($pathinfo === '/images/38da727.jpg') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => '38da727',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_38da727',);
-                }
-
-                // _assetic_38da727_0
-                if ($pathinfo === '/images/38da727_herbalife3_1.jpg') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => '38da727',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_38da727_0',);
-                }
-
-            }
-
             if (0 === strpos($pathinfo, '/images/148b91a')) {
                 // _assetic_148b91a
                 if ($pathinfo === '/images/148b91a.png') {
@@ -71,6 +58,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // _assetic_148b91a_0
                 if ($pathinfo === '/images/148b91a_healthy_breakfast_vanilla_1.png') {
                     return array (  '_controller' => 'assetic.controller:render',  'name' => '148b91a',  'pos' => 0,  '_format' => 'png',  '_route' => '_assetic_148b91a_0',);
+                }
+
+            }
+
+            if (0 === strpos($pathinfo, '/images/38da727')) {
+                // _assetic_38da727
+                if ($pathinfo === '/images/38da727.jpg') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '38da727',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_38da727',);
+                }
+
+                // _assetic_38da727_0
+                if ($pathinfo === '/images/38da727_herbalife3_1.jpg') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '38da727',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_38da727_0',);
                 }
 
             }

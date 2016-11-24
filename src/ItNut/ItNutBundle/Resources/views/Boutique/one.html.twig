@@ -72,17 +72,15 @@
 
                     <div class="col-sm-5 col-lg-5 col-md-5">
                         <div class="thumbnail">
-                            {% for file in id %}
-                                {{ file.getRealPath() }}
-                                {% if file.getRealPath() == "" %} 
-                                    {% image '@ItNutItNutBundle/Resources/public/images/healthy_breakfast_vanilla.png' %}
+                        {% if id is empty %}
+                            {% image '@ItNutItNutBundle/Resources/public/images/healthy_breakfast_vanilla.png' %}
                                         <img src="{{ asset_url }}" alt="healthy_breakfast_vanilla" />
-                                    {% endimage %}
-                                {% else %}
-                                    <img src="{{ asset('')  ~ file }}" />
-                                {% endif %}
+                            {% endimage %}
+                        {% else %}
+                            {% for file in id %}
+                                <img src="{{ asset('')  ~ file }}" />
                             {% endfor %}
-                        
+                        {% endif %}
                         </div>
                     </div>
 

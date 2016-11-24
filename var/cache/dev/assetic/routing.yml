@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /home/aurelie/Sites/ItNut/app/config/routing_dev.yml
+    resource: /Users/nicolaspinaud/Sites/ItNut-s/app/config/routing_dev.yml

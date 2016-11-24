@@ -22,19 +22,19 @@ return array (
       ),
     ),
   ),
-  '38da727' => 
+  '148b91a' => 
   array (
     0 => 
     array (
-      0 => '@ItNutItNutBundle/Resources/public/images/herbalife3.jpg',
+      0 => '@ItNutItNutBundle/Resources/public/images/healthy_breakfast_vanilla.png',
     ),
     1 => 
     array (
     ),
     2 => 
     array (
-      'output' => '_controller/images/38da727.jpg',
-      'name' => '38da727',
+      'output' => '_controller/images/148b91a.png',
+      'name' => '148b91a',
       'debug' => NULL,
       'combine' => NULL,
       'vars' => 

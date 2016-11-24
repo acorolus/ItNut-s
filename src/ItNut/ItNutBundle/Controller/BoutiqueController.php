@@ -75,11 +75,11 @@ class BoutiqueController extends Controller
             $produit->setShortcode(str_replace(' ', '-', $produit->getNom()));
             $fichier = $produit->getImage();
 
-            $nomDeFichier = md5(uniqid()).'.'.$fichier->guessExtension();
+            // $nomDeFichier = md5(uniqid()).'.'.$fichier->guessExtension();
 
-            $fichier->move("images",$nomDeFichier);
+            // $fichier->move("images",$nomDeFichier);
 
-            $produit->setImage($nomDeFichier);
+            $produit->setImage("");
             
             $em = $this->getDoctrine()->getManager();
             $em->persist($produit);

@@ -3499,11 +3499,11 @@ namespace
 {
 class Twig_Environment
 {
-const VERSION ='1.28.1';
-const VERSION_ID = 12801;
+const VERSION ='1.28.2';
+const VERSION_ID = 12802;
 const MAJOR_VERSION = 1;
 const MINOR_VERSION = 28;
-const RELEASE_VERSION = 1;
+const RELEASE_VERSION = 2;
 const EXTRA_VERSION ='';
 protected $charset;
 protected $loader;
@@ -5563,6 +5563,7 @@ $methods[] = $refMethod->name;
 } else {
 $methods = get_class_methods($object);
 }
+sort($methods);
 $cache = array();
 foreach ($methods as $method) {
 $cache[$method] = $method;
@@ -5621,7 +5622,16 @@ return;
 throw $e;
 }
 if ($object instanceof Twig_TemplateInterface) {
-@trigger_error('Using the dot notation on an instance of '.__CLASS__.' is deprecated since version 1.28 and won\'t be supported anymore in 2.0.', E_USER_DEPRECATED);
+$self = $object->getTemplateName() === $this->getTemplateName();
+$message = sprintf('Calling "%s" on template "%s" from template "%s" is deprecated since version 1.28 and won\'t be supported anymore in 2.0.', $method, $object->getTemplateName(), $this->getTemplateName());
+if ('renderBlock'=== $method ||'displayBlock'=== $method) {
+$message .= sprintf(' Use block("%s"%s) instead).', $arguments[0], $self ?'':', template');
+} elseif ('hasBlock'=== $method) {
+$message .= sprintf(' Use "block("%s"%s) is defined" instead).', $arguments[0], $self ?'':', template');
+} elseif ('render'=== $method ||'display'=== $method) {
+$message .= sprintf(' Use include("%s") instead).', $object->getTemplateName());
+}
+@trigger_error($message, E_USER_DEPRECATED);
 return $ret ===''?'': new Twig_Markup($ret, $this->env->getCharset());
 }
 return $ret;
